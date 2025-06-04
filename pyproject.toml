@@ -1,0 +1,14 @@
+[project]
+name = "lingopal-ws-client"
+version = "0.1.0"
+description = "Client for Lingopal WebSocket transcription service"
+authors = [{name = "Lingopal", email = "support@lingopal.ai"}]
+dependencies = ["websockets>=11.0"]
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+dev = ["pytest", "mypy", "ruff"]
+
+[project.scripts]
+lingopal-ws-client = "lingopal_ws_client.client:connect_to_server"

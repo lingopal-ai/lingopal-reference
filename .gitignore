@@ -1,0 +1,48 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environment
+env/
+venv/
+ENV/
+env.bak/
+*.env
+
+# Installer files
+*.egg-info/
+dist/
+build/
+*.egg
+pip-wheel-metadata/
+
+# Testing / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.cache
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+.pyre/
+
+# Linting
+ruff_cache/
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+
+# MacOS
+.DS_Store
+
+# Logs and misc
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
