@@ -82,3 +82,20 @@ This will:
 - If connection fails due to a missing header argument, make sure you're using `websockets>=11.0`.
 - Example script is located at `examples/run_client.py`.
 
+
+# ▶️ Start a Stream via API (Optional)
+
+You can use `examples/start_stream.py` to initiate a stream via the Lingopal API.
+
+### Required Environment Variables:
+
+- `LINGOPAL_API_KEY`: Your API key for authentication
+- `LINGOPAL_INGEST_URL`: The SRT ingest URL (e.g., `srt://your.server:7070`)
+
+### Example:
+
+```bash
+export LINGOPAL_API_KEY="your-api-key"
+export LINGOPAL_INGEST_URL="srt://your.srt.server:7070"
+
+python examples/start_stream.py

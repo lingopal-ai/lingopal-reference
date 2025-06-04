@@ -3,7 +3,7 @@ name = "lingopal-ws-client"
 version = "0.1.0"
 description = "Client for Lingopal WebSocket transcription service"
 authors = [{name = "Lingopal", email = "support@lingopal.ai"}]
-dependencies = ["websockets>=11.0"]
+dependencies = ["websockets>=11.0", "httpx>=0.24"]
 readme = "README.md"
 requires-python = ">=3.10"
 
