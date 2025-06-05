@@ -5,7 +5,7 @@ import os
 # Required environment variables
 API_KEY = os.getenv("LINGOPAL_API_KEY")
 INGEST_URL = os.getenv("LINGOPAL_INGEST_URL")
-API_URL = os.getenv("LINGOPAL_API_URL", "https://streaming.lingopal.ai/v1/start_stream")
+API_URL = os.getenv("LINGOPAL_API_URL", "https://streaming.lingopal.ai/v1/streams/start")
 
 # Check required variables
 if not API_KEY:
@@ -37,7 +37,8 @@ headers = {
 }
 
 if __name__ == "__main__":
-    response = httpx.post(API_URL, headers=headers, json=payload)
+    response = httpx.post(API_URL, headers=headers, json=payload, timeout=30.0)
+    print(f"Request URL: {response.url}")
     print(f"Status Code: {response.status_code}")
     try:
         print("Response:")

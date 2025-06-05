@@ -46,6 +46,7 @@ Run the example WebSocket client script:
 
 ```bash
 python examples/run_client.py <stream_id> <api_key> [env]
+python examples/run_client.py 06841c36-4c8c-719e-8000-0caa443828fc e2f27925d60b4c1fa954c17a2e1bc8f5
 ```
 
 **Arguments:**
