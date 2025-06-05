@@ -1,4 +1,4 @@
-# 🚀 Lingopal WebSocket Client
+# 🚀 Lingopal Cookbook
 
 This repository contains a simple Python client that connects to the **Lingopal transcription WebSocket service** using your stream ID and API key.
 
@@ -30,7 +30,7 @@ source env/bin/activate  # On Windows: env\Scripts\activate
 
 ---
 
-### 3. 📥 Install the WebSocket Client
+### 3. 📥 Install the dependencies
 
 Install the package in editable/development mode:
 
@@ -40,13 +40,31 @@ pip install -e .
 
 ---
 
-## 🧪 Usage
+
+# ▶️ Start a Stream via API (Optional)
+
+You can use `examples/start_stream.py` to initiate a stream via the Lingopal API.
+
+### Required Environment Variables:
+
+- `LINGOPAL_API_KEY`: Your API key for authentication
+- `LINGOPAL_INGEST_URL`: The SRT ingest URL (e.g., `srt://your.server:7070`)
+
+### Example:
+
+```bash
+export LINGOPAL_API_KEY="your-api-key"
+export LINGOPAL_INGEST_URL="srt://your.srt.server:7070"
+
+python examples/start_stream.py
+
+
+# 🚀 Lingopal WebSocket Client
 
 Run the example WebSocket client script:
 
 ```bash
-python examples/run_client.py <stream_id> <api_key> [env]
-python examples/run_client.py 06841c36-4c8c-719e-8000-0caa443828fc e2f27925d60b4c1fa954c17a2e1bc8f5
+python examples/run_client.py <stream_id> <api_key>
 ```
 
 **Arguments:**
@@ -83,20 +101,3 @@ This will:
 - If connection fails due to a missing header argument, make sure you're using `websockets>=11.0`.
 - Example script is located at `examples/run_client.py`.
 
-
-# ▶️ Start a Stream via API (Optional)
-
-You can use `examples/start_stream.py` to initiate a stream via the Lingopal API.
-
-### Required Environment Variables:
-
-- `LINGOPAL_API_KEY`: Your API key for authentication
-- `LINGOPAL_INGEST_URL`: The SRT ingest URL (e.g., `srt://your.server:7070`)
-
-### Example:
-
-```bash
-export LINGOPAL_API_KEY="your-api-key"
-export LINGOPAL_INGEST_URL="srt://your.srt.server:7070"
-
-python examples/start_stream.py
