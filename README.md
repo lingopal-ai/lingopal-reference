@@ -41,7 +41,7 @@ pip install -e .
 ---
 
 
-# ▶️ Start a Stream via API (Optional)
+# ▶️ Start a Stream via API
 
 You can use `examples/start_stream.py` to initiate a stream via the Lingopal API.
 
@@ -57,7 +57,7 @@ export LINGOPAL_API_KEY="your-api-key"
 export LINGOPAL_INGEST_URL="srt://your.srt.server:7070"
 
 python examples/start_stream.py
-
+```
 
 # 🚀 Lingopal WebSocket Client
 
