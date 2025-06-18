@@ -19,15 +19,15 @@ payload = {
     "vocals_track": "0",
     "background_track": 1,
     "mix": "-9,-6",
-    "voice_cloning": True,
-    "dst_url": "",
     "enable_captions_708": True,
     "enable_captions_608": False,
     "src_language": "en",
     "dst_language": ["es"],
     "use_paraphrasing_transcription": True,
     "start_wowza": True,
-    "is_hls_stream": False
+    "is_hls_stream": False,
+    "use_contextual_translation": False,
+    "lipsync": False
 }
 
 headers = {
