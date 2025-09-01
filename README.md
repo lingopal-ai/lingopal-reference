@@ -80,20 +80,20 @@ You can use `examples/schedule_stream.py` to schedule a stream for later executi
 ```bash
 export LINGOPAL_API_KEY="your-api-key"
 
-python examples/schedule_stream.py "srt://your.srt.server:7070" "2024-01-15T10:00:00" "America/New_York"
+python examples/schedule_stream.py --ingest_url "srt://your.srt.server:7070" --scheduled_time "2024-01-15 10:00:00" --timezone "America/New_York"
 ```
 
 ### Usage Examples:
 
 ```bash
 # Schedule a stream for New York timezone
-python examples/schedule_stream.py "srt://stream.example.com:8080" "2024-01-20T14:30:00" "America/New_York"
+python examples/schedule_stream.py --ingest_url "srt://stream.example.com:8080" --scheduled_time "2024-01-20 14:30:00" --timezone "America/New_York"
 
 # Schedule a stream for London timezone
-python examples/schedule_stream.py "srt://live.server:9090" "2024-02-01T09:00:00" "Europe/London"
+python examples/schedule_stream.py --ingest_url "srt://live.server:9090" --scheduled_time "2024-02-01 09:00:00" --timezone "Europe/London"
 
 # Schedule a stream for Tokyo timezone
-python examples/schedule_stream.py "srt://asia.stream:7070" "2024-01-25T18:00:00" "Asia/Tokyo"
+python examples/schedule_stream.py --ingest_url "srt://asia.stream:7070" --scheduled_time "2024-01-25 18:00:00" --timezone "Asia/Tokyo"
 ```
 
 ### ⏰ Timezone Guidelines:
@@ -116,6 +116,7 @@ python examples/schedule_stream.py "srt://asia.stream:7070" "2024-01-25T18:00:00
 - **Customizable Audio**: Configure vocals track, background track, and mix levels
 - **Caption Support**: Optional 708/608 caption generation
 - **Multi-language**: Support for source and destination language configuration
+- **Stream-livee**: In order to have a live stream at your time, Please schedule stream 10 minutes before. So that it can be live at that moment
 
 # 🚀 Lingopal WebSocket Client
 
