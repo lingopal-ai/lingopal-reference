@@ -59,6 +59,65 @@ export LINGOPAL_INGEST_URL="srt://your.srt.server:7070"
 python examples/start_stream.py
 ```
 
+---
+
+# 📅 Schedule a Stream via API
+
+You can use `examples/schedule_stream.py` to schedule a stream for later execution via the Lingopal API.
+
+### Required Environment Variables:
+
+- `LINGOPAL_API_KEY`: Your API key for authentication
+
+### Command Line Arguments:
+
+- `ingest_url`: The SRT ingest URL (e.g., `srt://your.server:7070`)
+- `scheduled_time`: The scheduled start time in ISO 8601 format (e.g., `2024-01-15T10:00:00`)
+- `timezone`: Regional timezone for the scheduled time (e.g., `America/New_York`, `Europe/London`, `Asia/Tokyo`)
+
+### Example:
+
+```bash
+export LINGOPAL_API_KEY="your-api-key"
+
+python examples/schedule_stream.py --ingest_url "srt://your.srt.server:7070" --scheduled_time "2024-01-15 10:00:00" --timezone "America/New_York"
+```
+
+### Usage Examples:
+
+```bash
+# Schedule a stream for New York timezone
+python examples/schedule_stream.py --ingest_url "srt://stream.example.com:8080" --scheduled_time "2024-01-20 14:30:00" --timezone "America/New_York"
+
+# Schedule a stream for London timezone
+python examples/schedule_stream.py --ingest_url "srt://live.server:9090" --scheduled_time "2024-02-01 09:00:00" --timezone "Europe/London"
+
+# Schedule a stream for Tokyo timezone
+python examples/schedule_stream.py --ingest_url "srt://asia.stream:7070" --scheduled_time "2024-01-25 18:00:00" --timezone "Asia/Tokyo"
+```
+
+### ⏰ Timezone Guidelines:
+
+**Use regional timezones instead of UTC offsets:**
+- ✅ **Good**: `America/New_York`, `Europe/London`, `Asia/Tokyo`, `Australia/Sydney`
+- ❌ **Avoid**: `UTC`, `UTC+5`, `EST`, `PST`
+
+**Common Regional Timezones:**
+- **North America**: `America/New_York`, `America/Chicago`, `America/Denver`, `America/Los_Angeles`
+- **Europe**: `Europe/London`, `Europe/Paris`, `Europe/Berlin`, `Europe/Moscow`
+- **Asia**: `Asia/Tokyo`, `Asia/Shanghai`, `Asia/Singapore`, `Asia/Dubai`
+- **Australia**: `Australia/Sydney`, `Australia/Melbourne`, `Australia/Perth`
+
+### Key Features:
+
+- **Scheduled Execution**: Set a specific time for stream start using `scheduled_time` (ISO 8601 format)
+- **Voice Cloning**: Enable AI voice cloning with `voice_cloning: true`
+- **Lipsync**: Enable lip synchronization with `lipsync: true`
+- **Customizable Audio**: Configure vocals track, background track, and mix levels
+- **Caption Support**: Optional 708/608 caption generation
+- **Multi-language**: Support for source and destination language configuration
+- **Stream-livee**: In order to have a live stream at your time, Please schedule stream 10 minutes before. So that it can be live at that moment
+
 # 🚀 Lingopal WebSocket Client
 
 Run the example WebSocket client script:
