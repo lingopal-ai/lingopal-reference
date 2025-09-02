@@ -1,0 +1,809 @@
+1
+00:00:01,094 --> 00:00:04,114
+[SPEAKER_02]
+Las cosas justo empezaban a mejorar para Jorge cuando pasó lo de la tele.
+
+2
+00:00:04,739 --> 00:00:08,249
+[SPEAKER_02]
+Acababa de mudarse a una ciudad nueva, empezó su vida de cero, encontró algo de trabajo y consiguió un lugar.
+
+3
+00:00:08,468 --> 00:00:10,662
+[SPEAKER_02]
+Las tuyas buscan en la vaguedad, eran interminables.
+
+4
+00:00:10,864 --> 00:00:15,437
+[SPEAKER_03]
+Va bien. O sea, la forma en que estoy procastinando ahora es trabajando, ¿sabes?
+
+5
+00:00:15,893 --> 00:00:18,880
+[SPEAKER_03]
+Sabes, estoy encontrando mi camino. Me siento bien. Estoy pagando
+
+6
+00:00:19,082 --> 00:00:20,702
+[SPEAKER_03]
+las facturas relativamente a tiempo.
+
+7
+00:00:21,074 --> 00:00:29,410
+[SPEAKER_02]
+Me mudé a Nueva York, lo que daba miedo, y tuve la suerte de encontrar un apartamento que los neoyorquinos de verdad le dijeron que era una ganga: un pequeño estudio en el East Village, una habitación, buena ubicación, barato.
+
+8
+00:00:30,625 --> 00:00:33,578
+[SPEAKER_02]
+Y una noche está sentado a su mesa, viendo La soltera en la tele.
+
+9
+00:00:34,202 --> 00:00:38,320
+[SPEAKER_02]
+Y es el episodio en el que la soltera ha reducido la lista a cuatro chicos de los que finalmente elegirá a uno.
+
+10
+00:00:38,674 --> 00:00:40,935
+[SPEAKER_02]
+y está en Nueva York visitando a uno de los pretendientes.
+
+11
+00:00:41,256 --> 00:00:51,111
+[SPEAKER_03]
+Y, ya sabes, él sale a cenar con su familia y, pues, comen y, sabes, está la hermana con la mirada sospechosa y, ya sabes, como que la familia de todo el mundo actúa exactamente igual, ¿no?
+
+12
+00:00:52,191 --> 00:00:54,942
+[SPEAKER_03]
+y luego y luego se suben a la limusina y
+
+13
+00:00:55,802 --> 00:00:57,709
+[SPEAKER_03]
+Ellos deciden volver a su apartamento.
+
+14
+00:00:58,266 --> 00:00:59,346
+[SPEAKER_03]
+Ahora, como que, ahora estoy...
+
+15
+00:01:00,325 --> 00:01:02,181
+[SPEAKER_03]
+Ahora estoy al borde de mi asiento.
+
+16
+00:01:03,312 --> 00:01:07,379
+[SPEAKER_03]
+Sabes, me acabo de mudar a Nueva York, es una ciudad enorme y...
+
+17
+00:01:08,205 --> 00:01:13,892
+[SPEAKER_03]
+Estaría tan emocionada si pudiera reconocernos a través de eso. Estaría tan emocionada. Me haría tan feliz.
+
+18
+00:01:14,534 --> 00:01:16,812
+[SPEAKER_03]
+Y por eso estoy totalmente, totalmente triste.
+
+19
+00:01:17,250 --> 00:01:17,858
+[SPEAKER_00]
+Error: Operación no válida: El accesor rápido `response.text` requiere que la respuesta contenga una `Part` válida, pero no se devolvió ninguna. El [finish_reason] del candidato (https://ai.google.dev/api/generate-content#finishreason) es 1.
+
+20
+00:01:20,828 --> 00:01:24,119
+[SPEAKER_03]
+Así que ellos, ellos salen de la limusina y y él la abraza en la calle.
+
+21
+00:01:24,540 --> 00:01:25,452
+[SPEAKER_03]
+Y pintaron.
+
+22
+00:01:25,637 --> 00:01:27,544
+[SPEAKER_03]
+y muestran un edificio, muestran un ejército.
+
+23
+00:01:29,400 --> 00:01:30,261
+[SPEAKER_03]
+Y es mi honor.
+
+24
+00:01:31,358 --> 00:01:35,054
+[SPEAKER_03]
+Es tu edificio. Es mi edificio. Es el toldo de mi edificio.
+
+25
+00:01:35,526 --> 00:01:41,820
+[SPEAKER_03]
+Dice la dirección, dice la calle, es, ¿sabes?, posiblemente el único lugar de Nueva York que realmente conozco.
+
+26
+00:01:45,685 --> 00:01:57,852
+[SPEAKER_03]
+Y entonces él abre la puerta, ella entra y es mi vestíbulo, ¿sabes? Ahí está mi vestíbulo. Ahí está la fila de buzones, ¿sabes? Y yo, como que... me levanto de la silla y no puedo hablar. Estoy como,
+
+27
+00:01:58,375 --> 00:02:00,400
+[SPEAKER_03]
+ya sabes, como señalando a la tele.
+
+28
+00:02:00,974 --> 00:02:04,804
+[SPEAKER_02]
+Si fuera yo, pensaría: ¿están aquí ahora mismo? ¿Como, en el edificio?
+
+29
+00:02:05,597 --> 00:02:06,542
+[SPEAKER_03]
+tú
+
+30
+00:02:07,217 --> 00:02:11,841
+[SPEAKER_03]
+Eres demasiado inteligente. O sea, yo estaba, ya sabes, estaba... no podía pensar. Me quedé como que...
+
+31
+00:02:13,984 --> 00:02:21,814
+[SPEAKER_03]
+sabes. Fue... ¿me entiendes? Me quedé como que... fue, sabes, estaba totalmente pasmado. Es que no podía estar pasando, ¿sabes?
+
+32
+00:02:23,114 --> 00:02:26,455
+[SPEAKER_02]
+¿Por qué no toma el ascensor hasta el cuarto piso? Jorge vive en el quinto.
+
+33
+00:02:27,045 --> 00:02:28,244
+[SPEAKER_02]
+Caminaron por el pasillo hacia el
+
+34
+00:02:28,767 --> 00:02:30,319
+[SPEAKER_02]
+Y entonces Jorge se da cuenta de algo más.
+
+35
+00:02:30,505 --> 00:02:36,462
+[SPEAKER_03]
+Sabes, no solo vive en la misma ciudad que yo. No vive en la misma calle que yo. No solo vive en el mismo edificio que yo. Básicamente, vive en mi apartamento.
+
+36
+00:02:37,255 --> 00:02:40,073
+[SPEAKER_03]
+Vive exactamente en el mismo apartamento. Es exactamente la misma distribución.
+
+37
+00:02:40,073 --> 00:02:43,482
+[SPEAKER_02]
+Espera, o sea, la cámara entra a este apartamento y ves...
+
+38
+00:02:44,039 --> 00:02:45,895
+[SPEAKER_02]
+tu apartamento, básicamente.
+
+39
+00:02:46,215 --> 00:02:48,814
+[SPEAKER_03]
+una versión mucho mejor de mi apartamento.
+
+40
+00:02:49,371 --> 00:02:50,603
+[SPEAKER_03]
+El suyo es mucho mejor.
+
+41
+00:02:51,261 --> 00:02:52,560
+[SPEAKER_03]
+Las paredes son más claras
+
+42
+00:02:53,050 --> 00:02:57,404
+[SPEAKER_03]
+El lugar está más limpio, los muebles son más bonitos. Tiene una media pared.
+
+43
+00:02:58,551 --> 00:03:01,842
+[SPEAKER_03]
+Tiene una media pared. Una media pared con ladrillo
+
+44
+00:03:01,842 --> 00:03:02,787
+[SPEAKER_02]
+Esta es una transmisión de prueba.
+
+45
+00:03:01,859 --> 00:03:04,474
+[SPEAKER_03]
+Es como, es como, es como panel de yeso, ¿sabes?
+
+46
+00:03:04,710 --> 00:03:08,575
+[SPEAKER_03]
+Pero parece que tiene como una especie de encimera.
+
+47
+00:03:09,385 --> 00:03:11,798
+[SPEAKER_02]
+Y en ese momento, Jorge tiene una revelación.
+
+48
+00:03:12,507 --> 00:03:14,194
+[SPEAKER_02]
+En realidad no le está yendo muy bien.
+
+49
+00:03:14,633 --> 00:03:17,468
+[SPEAKER_02]
+Este apartamento es una especie de basurero comparado con el de este tipo que está en la tele.
+
+50
+00:03:18,177 --> 00:03:22,615
+[SPEAKER_02]
+Además, está viendo a Trista Ren, la Bachelorette, en la tele, con cara de incómodo.
+
+51
+00:03:22,902 --> 00:03:25,365
+[SPEAKER_02]
+en su apartamento en la televisión nacional.
+
+52
+00:03:25,956 --> 00:03:27,255
+[SPEAKER_02]
+De hecho, ella lo deja plantado.
+
+53
+00:03:28,032 --> 00:03:35,845
+[SPEAKER_03]
+Sale del apartamento y cortan a esa entrevista de frente, ya sabes, y ella está mirando a la cámara y dice:
+
+54
+00:03:37,380 --> 00:03:40,401
+[SPEAKER_03]
+He salido con chicos con apartamentos muy malos antes.
+
+55
+00:03:40,536 --> 00:03:42,595
+[SPEAKER_03]
+No puedo juzgarlo por eso. Tengo que
+
+56
+00:03:42,831 --> 00:03:46,442
+[SPEAKER_03]
+tengo que averiguar por qué... por qué siente que puede vivir en un apartamento así.
+
+57
+00:03:47,421 --> 00:03:47,978
+[SPEAKER_03]
+estudiante
+
+58
+00:03:47,978 --> 00:03:48,923
+[SPEAKER_02]
+por el apartamento
+
+59
+00:03:49,733 --> 00:03:55,605
+[SPEAKER_02]
+Sí. Espera, ¿se perdió The Bachelorette por el apartamento? Ah, sí. ¿Y era tu apartamento?
+
+60
+00:03:55,892 --> 00:03:56,635
+[SPEAKER_02]
+pero mejor.
+
+61
+00:04:03,047 --> 00:04:08,262
+[SPEAKER_02]
+En los días siguientes, todo se va al diablo para Jorge. Está deprimido, su nueva vida no parece tan brillante.
+
+62
+00:04:08,970 --> 00:04:17,256
+[SPEAKER_02]
+Sus amigos de Nueva York lo consuelan. Mira, le dicen, la soltera nunca había visto un apartamento de Nueva York. No sabe cómo vive la gente aquí. Esto no significa nada.
+
+63
+00:04:17,999 --> 00:04:20,091
+[SPEAKER_02]
+Lo que le ayuda durante un tiempo, hasta que un día.
+
+64
+00:04:20,344 --> 00:04:22,538
+[SPEAKER_02]
+Jorge toma el New York Post y lee.
+
+65
+00:04:22,774 --> 00:04:25,997
+[SPEAKER_02]
+es un artículo sobre su vecino Todd, el tipo de The Bachelorette.
+
+66
+00:04:26,520 --> 00:04:27,685
+[SPEAKER_02]
+Lo atraparon con cocaína.
+
+67
+00:04:28,579 --> 00:04:29,609
+[SPEAKER_03]
+tercer párrafo.
+
+68
+00:04:30,419 --> 00:04:36,780
+[SPEAKER_03]
+El destino de Toddman en The Bachelorette quedó sellado en el momento en que Ren puso un pie en su sórdido estudio de la Avenida A.
+
+69
+00:04:40,662 --> 00:04:43,362
+[SPEAKER_03]
+¿Entiendes el peso de eso? Sórdido.
+
+70
+00:04:43,480 --> 00:04:46,298
+[SPEAKER_03]
+un sórdido monoambiente en la Avenida A
+
+71
+00:04:47,057 --> 00:05:03,679
+[SPEAKER_03]
+Así que no es solo gente de fuera de Nueva York. Este es el New York Post. Nadie conoce los apartamentos de Nueva York como el New York Post. Estos tipos han estado en los apartamentos más sórdidos de la ciudad de Nueva York. Es sórdido, ¿sabes? Es sórdido, sórdido, sórdido.
+
+72
+00:05:03,949 --> 00:05:07,442
+[SPEAKER_03]
+Sabes, no hay tantas definiciones para "sordidez".
+
+73
+00:05:08,404 --> 00:05:10,665
+[SPEAKER_03]
+No hay muchas formas de interpretar la palabra sórdido.
+
+74
+00:05:11,037 --> 00:05:11,661
+[SPEAKER_03]
+em
+
+75
+00:05:11,762 --> 00:05:14,159
+[SPEAKER_03]
+¿Quizás quieren decir que es algo guay, sabes?
+
+76
+00:05:14,884 --> 00:05:15,441
+[SPEAKER_03]
+Jajajaja.
+
+77
+00:05:22,427 --> 00:05:24,081
+[SPEAKER_02]
+de alguna manera, sin querer.
+
+78
+00:05:24,469 --> 00:05:26,427
+[SPEAKER_02]
+Jorge tuvo la experiencia que una persona
+
+79
+00:05:26,545 --> 00:05:30,578
+[SPEAKER_02]
+si de verdad fuera a uno de los reality shows y luego lo echaran del programa.
+
+80
+00:05:31,320 --> 00:05:33,345
+[SPEAKER_02]
+La televisión nacional entró en su apartamento.
+
+81
+00:05:33,818 --> 00:05:35,050
+[SPEAKER_02]
+y luego los echó de la isla.
+
+82
+00:05:35,151 --> 00:05:36,045
+[SPEAKER_02]
+indirectamente
+
+83
+00:05:36,417 --> 00:05:38,796
+[SPEAKER_02]
+Fue como un daño colateral de un reality show.
+
+84
+00:05:39,184 --> 00:05:43,960
+[SPEAKER_03]
+sabes, yo nunca quise, no quería que Estados Unidos me juzgara y
+
+85
+00:05:44,230 --> 00:05:45,968
+[SPEAKER_03]
+Dime que mi apartamento es un asco.
+
+86
+00:05:46,356 --> 00:05:47,757
+[SPEAKER_03]
+No quería, no quería eso, pero
+
+87
+00:05:48,432 --> 00:05:51,604
+[SPEAKER_03]
+ese momento en que, ya sabes, cuando entraron a mi edificio.
+
+88
+00:05:51,959 --> 00:05:54,304
+[SPEAKER_03]
+Nick, abrieron esa puerta y era mi apartamento.
+
+89
+00:05:54,777 --> 00:05:58,557
+[SPEAKER_03]
+Pensé que era, ya sabes, pensé que era sexy. Pensé que lo era, ya sabes,
+
+90
+00:05:58,928 --> 00:06:01,341
+[SPEAKER_03]
+Y eso, ya sabes, y de repente
+
+91
+00:06:03,248 --> 00:06:05,729
+[SPEAKER_03]
+Piu piu piu.
+
+92
+00:06:06,269 --> 00:06:07,264
+[SPEAKER_03]
+ya sabes
+
+93
+00:06:09,036 --> 00:06:11,145
+[SPEAKER_03]
+¿Qué era?
+
+94
+00:06:11,230 --> 00:06:16,090
+[SPEAKER_03]
+<no text>
+
+95
+00:06:16,191 --> 00:06:18,975
+[SPEAKER_03]
+Pierdes. Pierdes. Pierdes.
+
+96
+00:06:18,975 --> 00:06:20,005
+[SPEAKER_02]
+deux
+
+97
+00:06:22,469 --> 00:06:28,510
+[SPEAKER_02]
+Dice que si no se acabara de mudar a la ciudad de Nueva York, si no acabara de empezar toda esta vida, no habría sido el golpe en el estómago que fue.
+
+98
+00:06:29,016 --> 00:06:31,041
+[SPEAKER_02]
+Lo que nos lleva al programa de radio de hoy.
+
+99
+00:06:31,328 --> 00:06:34,484
+[SPEAKER_02]
+Desde WBEZ Chicago, esto es This American Life. Soy Ira Glass.
+
+100
+00:06:34,500 --> 00:06:35,479
+[SPEAKER_02]
+Hoy en nuestro programa
+
+101
+00:06:35,985 --> 00:06:37,065
+[SPEAKER_02]
+Empezando de cero.
+
+102
+00:06:37,757 --> 00:06:43,309
+[SPEAKER_02]
+Historias de gente en ese período de sus vidas en el que todo está en el aire, están empezando de nuevo, todo es incierto.
+
+103
+00:06:43,883 --> 00:06:44,558
+[SPEAKER_02]
+Acto uno.
+
+104
+00:06:45,520 --> 00:06:46,229
+[SPEAKER_02]
+Amor de juventud
+
+105
+00:06:46,313 --> 00:06:47,292
+[SPEAKER_02]
+el modelo de negocio
+
+106
+00:06:48,389 --> 00:06:49,148
+[SPEAKER_02]
+Acto dos.
+
+107
+00:06:49,519 --> 00:06:51,139
+[SPEAKER_02]
+Ganando dinero a la antigua.
+
+108
+00:06:51,966 --> 00:06:52,624
+[SPEAKER_02]
+en ese anuncio
+
+109
+00:06:52,810 --> 00:06:54,835
+[SPEAKER_02]
+La historia de un hombre, un conductor de limusina para ser exactos.
+
+110
+00:06:55,088 --> 00:06:57,501
+[SPEAKER_02]
+Comienza cada día desde cero con solo unos cuantos dólares.
+
+111
+00:06:57,974 --> 00:06:59,087
+[SPEAKER_02]
+Se convierte en
+
+112
+00:06:59,408 --> 00:07:01,686
+[SPEAKER_02]
+miles o decenas de miles al final del día.
+
+113
+00:07:02,682 --> 00:07:03,205
+[SPEAKER_02]
+En realidad
+
+114
+00:07:04,049 --> 00:07:05,466
+[SPEAKER_02]
+el primero, empezando desde cero
+
+115
+00:07:05,972 --> 00:07:09,027
+[SPEAKER_02]
+En ese acto, Jonathan Goldstein retoma un cuento posiblemente familiar.
+
+116
+00:07:09,263 --> 00:07:12,570
+[SPEAKER_02]
+de un hombre, una mujer, un jardín y una serpiente. Quédense conmigo.
+
+117
+00:07:20,974 --> 00:07:23,219
+[SPEAKER_02]
+Uno: el amor platónico por el modelo de negocio.
+
+118
+00:07:24,434 --> 00:07:27,792
+[SPEAKER_02]
+Vale, sabes que hay tiendas de comestibles familiares, periódicos familiares.
+
+119
+00:07:27,994 --> 00:07:31,049
+[SPEAKER_02]
+Pero, ¿podrías dejarlo todo, cambiar de vida, empezar de cero?
+
+120
+00:07:31,757 --> 00:07:33,934
+[SPEAKER_02]
+y crear una cadena de cable familiar.
+
+121
+00:07:34,795 --> 00:07:37,410
+[SPEAKER_02]
+El propio padre de Molly Fitzsimmons lo intentó, y ella tiene la respuesta.
+
+122
+00:07:38,204 --> 00:07:41,190
+[SPEAKER_01]
+Los padres de algunas personas dejan sus trabajos y se hacen maestros.
+
+123
+00:07:41,545 --> 00:07:44,987
+[SPEAKER_01]
+Algunos se jubilan anticipadamente y empiezan un nuevo pasatiempo como el modelismo.
+
+124
+00:07:46,067 --> 00:07:52,547
+[SPEAKER_01]
+Mi padre, después de ceder las riendas del negocio que tuvo y dirigió durante 25 años, empezó un canal de cable.
+
+125
+00:07:53,189 --> 00:07:54,252
+[SPEAKER_01]
+desde cero
+
+126
+00:07:55,450 --> 00:08:00,293
+[SPEAKER_01]
+Era febrero de 1995 y buscaba algo nuevo que hacer, pero no sabía qué.
+
+127
+00:08:01,069 --> 00:08:02,774
+[SPEAKER_01]
+Entonces llegó el juicio de O. J.
+
+128
+00:08:03,668 --> 00:08:08,899
+[SPEAKER_01]
+Lo acababan de operar de la espalda y el día que lo mandaron a casa a descansar fue justo el día que empezó el juicio.
+
+129
+00:08:10,064 --> 00:08:13,455
+[SPEAKER_01]
+Durante las largas pausas, cambiaba de canal.
+
+130
+00:08:13,692 --> 00:08:15,210
+[SPEAKER_00]
+Había mucho tiempo muerto.
+
+131
+00:08:15,548 --> 00:08:18,839
+[SPEAKER_00]
+En el juicio, tuve la oportunidad de ver todo lo que daban en la televisión.
+
+132
+00:08:19,142 --> 00:08:20,138
+[SPEAKER_00]
+durante todo el día
+
+133
+00:08:20,560 --> 00:08:21,319
+[SPEAKER_00]
+durante semanas
+
+134
+00:08:21,437 --> 00:08:23,024
+[SPEAKER_01]
+¿O sea que solo navegaste por internet?
+
+135
+00:08:23,243 --> 00:08:25,605
+[SPEAKER_00]
+Los momentos lentos del juicio eran la mayor parte del día.
+
+136
+00:08:26,044 --> 00:08:28,272
+[SPEAKER_00]
+Y me la pasé navegando por ahí.
+
+137
+00:08:28,440 --> 00:08:30,972
+[SPEAKER_00]
+la televisión diurna y ver de qué se trataba.
+
+138
+00:08:31,934 --> 00:08:38,582
+[SPEAKER_01]
+Lo que había era, sobre todo, telenovelas, programas de entrevistas, repeticiones, concursos, cosas que a mi padre no le interesaban.
+
+139
+00:08:39,426 --> 00:08:42,885
+[SPEAKER_01]
+Mi padre es alguien que resuelve problemas, y esto era un problema.
+
+140
+00:08:42,970 --> 00:08:46,581
+[SPEAKER_00]
+Así que pensé, hace falta algo más.
+
+141
+00:08:47,290 --> 00:08:49,332
+[SPEAKER_00]
+Hace falta un sitio para aparcar.
+
+142
+00:08:49,838 --> 00:08:52,994
+[SPEAKER_00]
+en la televisión si no quieres ver algo de lo que hay
+
+143
+00:08:53,753 --> 00:08:55,559
+[SPEAKER_00]
+Podrías tener la tele encendida.
+
+144
+00:08:55,710 --> 00:08:57,870
+[SPEAKER_00]
+Y estaría poniendo algo que
+
+145
+00:08:58,377 --> 00:08:59,339
+[SPEAKER_00]
+no te molestaba.
+
+146
+00:09:01,212 --> 00:09:05,599
+[SPEAKER_00]
+mantenía el canal hasta que empezara tu programa favorito o lo que eligieras ver.
+
+147
+00:09:06,207 --> 00:09:11,050
+[SPEAKER_01]
+Para mi padre, como para mucha gente, simplemente apagar la televisión no es una opción.
+
+148
+00:09:11,387 --> 00:09:18,660
+[SPEAKER_01]
+Así que se queda haciendo zapping por un montón de programas que odia, esperando a que vuelva el juicio de O. J., cuando se le enciende una bombillita en la cabeza.
+
+149
+00:09:18,914 --> 00:09:19,875
+[SPEAKER_00]
+Recordé
+
+150
+00:09:20,719 --> 00:09:21,799
+[SPEAKER_00]
+Mi esposa y yo
+
+151
+00:09:22,289 --> 00:09:26,811
+[SPEAKER_00]
+caminando para almorzar un viernes en el centro de Cleveland, entrando a un edificio.
+
+152
+00:09:28,515 --> 00:09:32,059
+[SPEAKER_00]
+La Liga Protectora de Animales tenía... uh... uh... cachorros.
+
+153
+00:09:32,346 --> 00:09:33,274
+[SPEAKER_00]
+en adopción.
+
+154
+00:09:34,523 --> 00:09:37,392
+[SPEAKER_00]
+y la multitud de gente que estaba alrededor de estos cachorros.
+
+155
+00:09:37,830 --> 00:09:38,657
+[SPEAKER_00]
+incluía
+
+156
+00:09:39,315 --> 00:09:42,252
+[SPEAKER_00]
+hombres con trajes de tres piezas y mujeres con
+
+157
+00:09:42,775 --> 00:09:44,766
+[SPEAKER_00]
+con atuendos elegantes y
+
+158
+00:09:45,036 --> 00:09:46,032
+[SPEAKER_00]
+Compradores
+
+159
+00:09:46,335 --> 00:09:49,525
+[SPEAKER_00]
+mamás con niños en cochecitos, el repartidor de UPS.
+
+160
+00:09:50,385 --> 00:09:52,765
+[SPEAKER_00]
+Y permanecieron juntos.
+
+161
+00:09:53,187 --> 00:09:57,169
+[SPEAKER_00]
+sonriendo y riendo, y a veces incluso hablándose entre sí en el
+
+162
+00:09:57,625 --> 00:09:59,970
+[SPEAKER_00]
+en medio de un gran edificio de la ciudad
