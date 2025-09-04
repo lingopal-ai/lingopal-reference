@@ -1,0 +1,13 @@
+# API Configuration
+API_BASE_URL=http://34.212.19.243:8000
+API_KEY=your-api-key-here
+
+# File Configuration
+AUDIO_FILE=loop.mp3
+OUTPUT_DIR=downloads
+
+# Translation Configuration
+TRANSLATION_LANGUAGES=es,fr,de
+
+# Optional: Job timeout (in minutes)
+JOB_TIMEOUT=30

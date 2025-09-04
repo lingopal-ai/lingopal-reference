@@ -154,6 +154,60 @@ This will:
 
 ---
 
+# 🎯 Translation & Transcription Examples
+
+The `examples/translation_transcription_examples/` folder contains comprehensive examples for using the Audio Transcription & Translation API.
+
+## Quick Start
+
+1. **Navigate to the examples folder:**
+```bash
+cd examples/translation_transcription_examples
+```
+
+2. **Set up your environment:**
+```bash
+python setup.py
+```
+
+3. **Edit the `.env` file with your configuration:**
+```bash
+# API Configuration
+API_BASE_URL=http://34.212.19.243:8000
+API_KEY=your-api-key-here
+
+# File Configuration
+AUDIO_FILE=path/to/your/audio.mp3
+OUTPUT_DIR=downloads
+
+# Translation Configuration
+TRANSLATION_LANGUAGES=es,fr,de
+```
+
+4. **Run the full transcription and translation pipeline:**
+```bash
+python transcribe_and_translate.py
+```
+
+## What's Included
+
+- **`transcribe_and_translate.py`**: Complete pipeline script for audio transcription and translation
+- **`setup.py`**: Automated environment setup and dependency installation
+- **`README_client.md`**: Detailed documentation for the client scripts
+- **Sample audio files**: Test audio files for trying out the API
+- **Environment templates**: Easy configuration setup
+
+## Features
+
+- **Audio Transcription**: Upload audio files and get SRT transcripts with speaker diarization
+- **Multi-language Translation**: Translate SRT files to multiple target languages
+- **Environment Configuration**: Easy setup using .env files
+
+
+For detailed usage instructions, see [`examples/translation_transcription_examples/README_client.md`](examples/translation_transcription_examples/README_client.md).
+
+---
+
 ## 🛠 Notes
 
 - The client uses the `websockets` library.
