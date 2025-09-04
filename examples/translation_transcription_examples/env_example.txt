@@ -4,6 +4,10 @@ API_KEY=your-api-key-here
 
 # File Configuration
 AUDIO_FILE=loop.mp3
+# Optional: Use S3 presigned URL instead of local file
+AUDIO_S3_URL=https://your-bucket.s3.amazonaws.com/path/to/audio.mp3?presigned-params
+# Optional: Use S3 presigned URL for SRT file translation (skips transcription)
+SRT_S3_URL=https://your-bucket.s3.amazonaws.com/path/to/subtitles.srt?presigned-params
 OUTPUT_DIR=downloads
 
 # Translation Configuration

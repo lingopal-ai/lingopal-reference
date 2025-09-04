@@ -152,6 +152,15 @@ This will:
 |--------|--------------------------------------------------------|
 | `prod` | `wss://streaming.lingopal.ai/v1/live/transcription`   |
 
+
+---
+
+## 🛠 Notes
+
+- The client uses the `websockets` library.
+- If connection fails due to a missing header argument, make sure you're using `websockets>=11.0`.
+- Example script is located at `examples/run_client.py`.
+
 ---
 
 # 🎯 Translation & Transcription Examples
@@ -177,7 +186,7 @@ API_BASE_URL=http://34.212.19.243:8000
 API_KEY=your-api-key-here
 
 # File Configuration
-AUDIO_FILE=path/to/your/audio.mp3
+AUDIO_FILE=loop.mp3
 OUTPUT_DIR=downloads
 
 # Translation Configuration
@@ -205,12 +214,3 @@ python transcribe_and_translate.py
 
 
 For detailed usage instructions, see [`examples/translation_transcription_examples/README_client.md`](examples/translation_transcription_examples/README_client.md).
-
----
-
-## 🛠 Notes
-
-- The client uses the `websockets` library.
-- If connection fails due to a missing header argument, make sure you're using `websockets>=11.0`.
-- Example script is located at `examples/run_client.py`.
-

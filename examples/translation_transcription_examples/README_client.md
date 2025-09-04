@@ -39,7 +39,7 @@ python transcribe_and_translate.py
 
 This will use default settings:
 - API Base URL: `http://34.212.19.243:8000`
-- Audio File: `test_audio.mp3`
+- Audio File: `loop.mp3`
 - Output Directory: `downloads`
 - Translation Languages: Spanish, French, German
 
@@ -57,6 +57,47 @@ export TRANSLATION_LANGUAGES="es,fr,de,it,pt"
 python transcribe_and_translate.py
 ```
 
+### Using S3 Presigned URLs
+
+You can also use S3 presigned URLs instead of local files:
+
+```bash
+export API_BASE_URL="http://34.212.19.243:8000"
+export API_KEY="your-api-key"
+export AUDIO_S3_URL="https://your-bucket.s3.amazonaws.com/path/to/audio.mp3?presigned-params"
+export OUTPUT_DIR="my_downloads"
+export TRANSLATION_LANGUAGES="es,fr,de,it,pt"
+
+python transcribe_and_translate.py
+```
+
+### Using S3 for Translation Only
+
+You can also use an S3 presigned URL for the SRT file to skip transcription and go directly to translation:
+
+```bash
+export API_BASE_URL="http://34.212.19.243:8000"
+export API_KEY="your-api-key"
+export SRT_S3_URL="https://your-bucket.s3.amazonaws.com/path/to/subtitles.srt?presigned-params"
+export OUTPUT_DIR="my_downloads"
+export TRANSLATION_LANGUAGES="es,fr,de,it,pt"
+
+python transcribe_and_translate.py
+```
+
+### Getting S3 URLs Only
+
+You can also get just the S3 URLs without downloading the files:
+
+```bash
+# Get S3 URLs for a specific job
+python get_s3_urls.py <job_id>
+
+# Or set JOB_ID environment variable
+export JOB_ID="your-job-id"
+python get_s3_urls.py
+```
+
 ### Programmatic Usage
 
 ```python
@@ -68,19 +109,28 @@ client = TranscribeTranslateClient(
     api_key="your-api-key"
 )
 
-# Start transcription
-transcription_job = client.start_transcription("audio.mp3")
+# Start transcription (using local file)
+transcription_job = client.start_transcription(audio_file_path="audio.mp3")
+
+# Or start transcription (using S3 URL)
+# transcription_job = client.start_transcription(s3_presigned_url="https://your-bucket.s3.amazonaws.com/audio.mp3?presigned-params")
 
 # Wait for completion
 if client.wait_for_job_completion(transcription_job, "transcription"):
-    # Download results
+    # Get S3 URLs without downloading
+    s3_urls = client.get_job_result_urls(transcription_job)
+    
+    # Or download results to local files
     files = client.download_job_results(transcription_job, "downloads")
     
     # Find SRT file for translation
-    srt_file = files.get('srt')
+    srt_file = files.get('transcript') or files.get('diarization')
     if srt_file:
-        # Start translation
-        translation_job = client.start_translation(srt_file, ["es", "fr", "de"])
+        # Start translation (using local file)
+        translation_job = client.start_translation(srt_file_path=srt_file, target_languages=["es", "fr", "de"])
+        
+        # Or start translation (using S3 URL)
+        # translation_job = client.start_translation(s3_presigned_url="https://your-bucket.s3.amazonaws.com/subtitles.srt?presigned-params", target_languages=["es", "fr", "de"])
         
         # Wait for translation
         if client.wait_for_job_completion(translation_job, "translation"):
@@ -137,7 +187,9 @@ python transcribe_and_translate.py
 |----------|---------|-------------|
 | `API_BASE_URL` | `http://34.212.19.243:8000` | Base URL of the API |
 | `API_KEY` | `None` | API key for authentication (if required) |
-| `AUDIO_FILE` | `test_audio.mp3` | Path to the audio file to transcribe |
+| `AUDIO_FILE` | `loop.mp3` | Path to the audio file to transcribe |
+| `AUDIO_S3_URL` | `None` | S3 presigned URL for audio file (alternative to AUDIO_FILE) |
+| `SRT_S3_URL` | `None` | S3 presigned URL for SRT file translation (skips transcription) |
 | `OUTPUT_DIR` | `downloads` | Directory to save downloaded files |
 | `TRANSLATION_LANGUAGES` | `es,fr,de` | Comma-separated list of target language codes |
 | `JOB_TIMEOUT` | `30` | Maximum time to wait for job completion (minutes) |

@@ -66,80 +66,107 @@ class TranscribeTranslateClient:
             raise
     
     def health_check(self) -> bool:
-        """Check if the API is healthy"""
+        """Check if the API is accessible by testing a simple endpoint"""
         try:
-            response = self._make_request('GET', '/health')
-            print(f"✅ API is healthy - Version: {response.get('version', 'unknown')}")
-            return True
+            # Since there's no health endpoint in the new API spec, we'll test with a simple request
+            # that should return an error but confirms the API is reachable
+            response = self._make_request('GET', '/api/v1/jobs/invalid-job-id/status')
+            return False  # This should fail, but if it doesn't, something is wrong
         except Exception as e:
-            print(f"❌ Health check failed: {e}")
-            return False
+            # If we get a 404 or similar error, the API is reachable
+            if "404" in str(e) or "Not Found" in str(e):
+                print(f"✅ API is accessible")
+                return True
+            else:
+                print(f"❌ API health check failed: {e}")
+                return False
     
-    def start_transcription(self, audio_file_path: str, language: str = "en", use_pyannote: bool = True) -> str:
+    def start_transcription(self, audio_file_path: str = None, s3_presigned_url: str = None) -> str:
         """
         Start transcription job
         
         Args:
-            audio_file_path: Path to the audio file
-            language: Language code (default: "en")
-            use_pyannote: Whether to use Pyannote speaker diarization
+            audio_file_path: Path to the audio file (optional if s3_presigned_url is provided)
+            s3_presigned_url: S3 presigned URL for audio file (optional if audio_file_path is provided)
             
         Returns:
             Job ID
+            
+        Note: Provide either audio_file_path OR s3_presigned_url, not both.
         """
-        print(f"🎵 Starting transcription for: {audio_file_path}")
+        if not audio_file_path and not s3_presigned_url:
+            raise ValueError("Either audio_file_path or s3_presigned_url must be provided")
         
-        if not os.path.exists(audio_file_path):
-            raise FileNotFoundError(f"Audio file not found: {audio_file_path}")
+        if audio_file_path and s3_presigned_url:
+            raise ValueError("Provide either audio_file_path OR s3_presigned_url, not both")
         
-        with open(audio_file_path, 'rb') as f:
-            files = {'file': (os.path.basename(audio_file_path), f, 'audio/mpeg')}
-            data = {
-                'request': json.dumps({
-                    'language': language,
-                    'use_pyannote': use_pyannote,
-                    'max_workers': 2,
-                    'extract_segments': True
-                })
-            }
+        if s3_presigned_url:
+            print(f"🎵 Starting transcription for S3 URL: {s3_presigned_url}")
+            data = {'s3_presigned_url': s3_presigned_url}
+            response = self._make_request('POST', '/api/v1/transcribe', data=data)
+        else:
+            print(f"🎵 Starting transcription for: {audio_file_path}")
             
-            response = self._make_request('POST', '/api/v1/transcribe', files=files, data=data)
+            if not os.path.exists(audio_file_path):
+                raise FileNotFoundError(f"Audio file not found: {audio_file_path}")
             
-            job_id = response['job_id']
-            print(f"✅ Transcription job started: {job_id}")
-            return job_id
+            with open(audio_file_path, 'rb') as f:
+                files = {'file': (os.path.basename(audio_file_path), f, 'audio/mpeg')}
+                response = self._make_request('POST', '/api/v1/transcribe', files=files)
+        
+        job_id = response['job_id']
+        print(f"✅ Transcription job started: {job_id}")
+        return job_id
     
-    def start_translation(self, srt_file_path: str, target_languages: list = None) -> str:
+    def start_translation(self, srt_file_path: str = None, s3_presigned_url: str = None, target_languages: list = None) -> str:
         """
         Start translation job
         
         Args:
-            srt_file_path: Path to the SRT file
+            srt_file_path: Path to the SRT file (optional if s3_presigned_url is provided)
+            s3_presigned_url: S3 presigned URL for SRT file (optional if srt_file_path is provided)
             target_languages: List of target language codes (default: ["es", "fr", "de"])
             
         Returns:
             Job ID
+            
+        Note: Provide either srt_file_path OR s3_presigned_url, not both.
         """
+        if not srt_file_path and not s3_presigned_url:
+            raise ValueError("Either srt_file_path or s3_presigned_url must be provided")
+        
+        if srt_file_path and s3_presigned_url:
+            raise ValueError("Provide either srt_file_path OR s3_presigned_url, not both")
+        
         if target_languages is None:
             target_languages = ["es", "fr", "de"]  # Spanish, French, German
         
-        print(f"🌐 Starting translation for: {srt_file_path}")
         print(f"   Target languages: {', '.join(target_languages)}")
         
-        if not os.path.exists(srt_file_path):
-            raise FileNotFoundError(f"SRT file not found: {srt_file_path}")
-        
-        with open(srt_file_path, 'rb') as f:
-            files = {'file': (os.path.basename(srt_file_path), f, 'text/plain')}
+        if s3_presigned_url:
+            print(f"🌐 Starting translation for S3 URL: {s3_presigned_url}")
             data = {
-                'languages': json.dumps(target_languages)
+                's3_presigned_url': s3_presigned_url,
+                'languages': ','.join(target_languages)
             }
+            response = self._make_request('POST', '/api/v1/translate', data=data)
+        else:
+            print(f"🌐 Starting translation for: {srt_file_path}")
             
-            response = self._make_request('POST', '/api/v1/translate', files=files, data=data)
+            if not os.path.exists(srt_file_path):
+                raise FileNotFoundError(f"SRT file not found: {srt_file_path}")
             
-            job_id = response['job_id']
-            print(f"✅ Translation job started: {job_id}")
-            return job_id
+            with open(srt_file_path, 'rb') as f:
+                files = {'file': (os.path.basename(srt_file_path), f, 'text/plain')}
+                # Support both comma-separated string and JSON array as per new API spec
+                data = {
+                    'languages': ','.join(target_languages)
+                }
+                response = self._make_request('POST', '/api/v1/translate', files=files, data=data)
+        
+        job_id = response['job_id']
+        print(f"✅ Translation job started: {job_id}")
+        return job_id
     
     def wait_for_job_completion(self, job_id: str, job_type: str = "job", timeout_minutes: int = 30) -> bool:
         """
@@ -187,6 +214,38 @@ class TranscribeTranslateClient:
                 print(f"❌ Error checking job status: {e}")
                 time.sleep(10)
     
+    def get_job_result_urls(self, job_id: str) -> Dict[str, str]:
+        """
+        Get S3 download URLs for job results without downloading
+        
+        Args:
+            job_id: Job ID
+            
+        Returns:
+            Dictionary mapping file types to S3 URLs
+        """
+        print(f"🔗 Getting S3 URLs for job: {job_id}")
+        
+        try:
+            result_response = self._make_request('GET', f'/api/v1/jobs/{job_id}/result')
+            download_urls = result_response.get('download_urls', {})
+            
+            print(f"🔍 Available S3 URLs: {list(download_urls.keys())}")
+            print()
+            
+            # Show S3 URLs in logs
+            print("🌐 S3 Download URLs:")
+            for file_type, url in download_urls.items():
+                if url:
+                    print(f"   {file_type}: {url}")
+            print()
+            
+            return download_urls
+            
+        except Exception as e:
+            print(f"❌ Error getting result URLs: {e}")
+            return {}
+    
     def download_job_results(self, job_id: str, output_dir: str = "downloads") -> Dict[str, str]:
         """
         Download job results
@@ -210,6 +269,14 @@ class TranscribeTranslateClient:
             download_urls = result_response.get('download_urls', {})
             
             print(f"🔍 Available download URLs: {list(download_urls.keys())}")
+            print()
+            
+            # Show S3 URLs in logs
+            print("🌐 S3 Download URLs:")
+            for file_type, url in download_urls.items():
+                if url:
+                    print(f"   {file_type}: {url}")
+            print()
             
             downloaded_files = {}
             
@@ -239,12 +306,14 @@ class TranscribeTranslateClient:
                     filename = f"{file_type}{extension}"
                     file_path = os.path.join(job_dir, filename)
                     
-                    print(f"   Downloading {file_type}: {filename}")
+                    print(f"📥 Downloading {file_type}: {filename}")
+                    print(f"   From: {url}")
                     
                     # Download file
                     urllib.request.urlretrieve(url, file_path)
                     downloaded_files[file_type] = file_path
                     print(f"   ✅ Downloaded: {file_path}")
+                    print()
             
             return downloaded_files
             
@@ -255,9 +324,11 @@ class TranscribeTranslateClient:
 def main():
     """Main function"""
     # Configuration
-    API_BASE_URL = os.getenv('API_BASE_URL', 'http://localhost:8000')
+    API_BASE_URL = os.getenv('API_BASE_URL', 'http://34.212.19.243:8000')
     API_KEY = os.getenv('API_KEY', None)
-    AUDIO_FILE = os.getenv('AUDIO_FILE', 'test_audio.mp3')
+    AUDIO_FILE = os.getenv('AUDIO_FILE', 'loop.mp3')
+    AUDIO_S3_URL = os.getenv('AUDIO_S3_URL', None)
+    SRT_S3_URL = os.getenv('SRT_S3_URL', None)  # For direct SRT translation
     OUTPUT_DIR = os.getenv('OUTPUT_DIR', 'downloads')
     TRANSLATION_LANGUAGES = os.getenv('TRANSLATION_LANGUAGES', 'es,fr,de').split(',')
     JOB_TIMEOUT = int(os.getenv('JOB_TIMEOUT', '30'))
@@ -265,7 +336,10 @@ def main():
     print("🎵 Transcribe and Translate Script")
     print("=" * 50)
     print(f"API Base URL: {API_BASE_URL}")
-    print(f"Audio File: {AUDIO_FILE}")
+    if AUDIO_S3_URL:
+        print(f"Audio S3 URL: {AUDIO_S3_URL}")
+    else:
+        print(f"Audio File: {AUDIO_FILE}")
     print(f"Output Directory: {OUTPUT_DIR}")
     print(f"Translation Languages: {', '.join(TRANSLATION_LANGUAGES)}")
     print()
@@ -282,7 +356,10 @@ def main():
     
     try:
         # Step 1: Start transcription
-        transcription_job_id = client.start_transcription(AUDIO_FILE)
+        if AUDIO_S3_URL:
+            transcription_job_id = client.start_transcription(s3_presigned_url=AUDIO_S3_URL)
+        else:
+            transcription_job_id = client.start_transcription(audio_file_path=AUDIO_FILE)
         print()
         
         # Step 2: Wait for transcription to complete
@@ -327,7 +404,13 @@ def main():
         # This line is now handled in the logic above
         print()
         # Step 4: Start translation
-        translation_job_id = client.start_translation(srt_file, TRANSLATION_LANGUAGES)
+        if SRT_S3_URL:
+            # Use S3 URL for translation instead of downloaded file
+            print(f"🌐 Using S3 URL for translation: {SRT_S3_URL}")
+            translation_job_id = client.start_translation(s3_presigned_url=SRT_S3_URL, target_languages=TRANSLATION_LANGUAGES)
+        else:
+            # Use downloaded SRT file for translation
+            translation_job_id = client.start_translation(srt_file_path=srt_file, target_languages=TRANSLATION_LANGUAGES)
         print()
         
         # Step 5: Wait for translation to complete
